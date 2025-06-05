@@ -1,4 +1,4 @@
-// JSON data tạm thời
+
         const productsData = {
             "products": [
                 {
