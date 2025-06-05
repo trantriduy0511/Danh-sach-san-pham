@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Danh Sách Sản Phẩm</span>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            </div>
+            <div class="user-actions">
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Tài khoản</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Giỏ hàng</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Sidebar (Filter) -->
+        <div class="sidebar">
+            <h1>Loại sản phẩm</h1>
+            <div class="filter-section">
+                <h2>Danh mục</h2>
+                <div class="filter-options">
+                    <input type="checkbox" id="category1" value="Đồng hồ" checked>
+                    <label for="category1">Đồng hồ</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="category2" value="Điện thoại" checked>
+                    <label for="category2">Điện thoại</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="category3" value="Laptop" checked>
+                    <label for="category3">Laptop</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="category4" value="Phụ kiện" checked>
+                    <label for="category4">Phụ kiện</label>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h2>Giá</h2>
+                <div class="price-range">
+                    <div>
+                        <label for="minPrice">Từ (đ)</label>
+                        <input type="number" id="minPrice" value="0">
+                    </div>
+                    <div>
+                        <label for="maxPrice">Đến (đ)</label>
+                        <input type="number" id="maxPrice" value="15000000">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h2>Thương hiệu</h2>
+                <div class="filter-options">
+                    <input type="checkbox" id="brand1" value="Samsung" checked>
+                    <label for="brand1">Samsung</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="brand2" value="Apple" checked>
+                    <label for="brand2">Apple</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="brand3" value="Xiaomi">
+                    <label for="brand3">Xiaomi</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="brand4" value="Oppo">
+                    <label for="brand4">Oppo</label>
+                </div>
+                <div class="filter-options">
+                    <input type="checkbox" id="brand5" value="Dell">
+                    <label for="brand5">Dell</label>
+                </div>
+            </div>
+            <button id="applyFilters" style="width: 100%; padding: 12px; background: #419e41; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px;">
+                Áp dụng bộ lọc
+            </button>
+        </div>
+        
+        <!-- Main Content (Products) -->
+        <main>
+            <div class="product-list" id="productList">
+                <!-- Sản phẩm sẽ được tải bằng JS -->
+            </div>
+            
+            <div class="pagination-container">
+                <div class="pagination">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal chi tiết sản phẩm -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-detail" id="productDetail">
+                <!-- Nội dung chi tiết sản phẩm sẽ được thêm bằng JS -->
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Giới thiệu</h3>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Hệ thống cửa hàng</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Liên Hệ</h3>
+                <ul>
+                    <li><a href="mailto:123abc@gmail.com">Email: 123abc@gmail.com</a></li>
+                    <li><a href="tel:0123456789">Hotline: 0123 456 789</a></li>
+                    <li><a href="#">Địa chỉ: Hà Đông, Hà Nội</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Khách hàng</h3>
+                <ul>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Hướng dẫn mua bán</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Danh Sách Sản Phẩm. Tất cả quyền được bảo lưu.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
